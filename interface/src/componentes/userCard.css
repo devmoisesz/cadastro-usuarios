@@ -1,0 +1,13 @@
+.user-card{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: white;
+    border-radius: 0.8rem;
+}
+.user-card-avatar{
+    width: 4rem;
+    height: 4rem;
+    
+}

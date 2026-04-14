@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  min-width: 100vh; /* vai ocupar no mínimo a tela toda */
+  color: black;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.625), #070505ec);
+
+}
