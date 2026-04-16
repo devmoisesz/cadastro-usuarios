@@ -11,7 +11,7 @@ function App() {
 
   useEffect( () => {
     async function buscarUsuarios(){
-      const response = await axios.get('http://localhost:3003/usuarios')
+      const response = await axios.get('https://api-cadastro-usuarios-6m0t.onrender.com/usuarios')
 
       setUsers(response.data)
     }
@@ -22,13 +22,13 @@ function App() {
   async function handleSubmit(event){
     event.preventDefault()
 
-    await axios.post('http://localhost:3003/usuarios', {
+    await axios.post('https://api-cadastro-usuarios-6m0t.onrender.com/usuarios', {
       nome: name,
       email,
       idade: age,
     })
 
-    const response = await axios.get('http://localhost:3003/usuarios')
+    const response = await axios.get('https://api-cadastro-usuarios-6m0t.onrender.com/usuarios')
     setUsers(response.data)
 
     setName("")
