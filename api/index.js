@@ -1,14 +1,15 @@
+import 'dotenv/config'
 import express from 'express'
-import mongoose from 'mongoose'
-import dotenv from 'dotenv'   
-dotenv.config()             
+import mongoose from 'mongoose'  
+import cors from 'cors'
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("Conectado ao banco de dados Mongo Db"))
-    .catch((error) => console.log(error))
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log("Conectado ao banco de dados Mongo Db"))
+  .catch((error) => console.log("ERRO:", error))
 
 const usuarioSchrema = new mongoose.Schema({
     nome: { type: String, required: true },
@@ -29,6 +30,6 @@ app.post('/usuarios', async (request, response) => {
     response.json(usuarioCriado)
 })
 
-app.listen(3003, '127.0.0.1', () => {
+app.listen(3003, () => {
     console.log("Servidor Rodando na porta 3003")
 })

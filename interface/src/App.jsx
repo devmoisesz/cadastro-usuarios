@@ -1,25 +1,39 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import UserCard from './componentes/userCard'
+import axios from 'axios'
 
 function App() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [age, setAge] = useState()
   const [users, setUsers] = useState([])
-  function handleSubmit(event){
-    event.preventDefault()
 
-    const newUsers = {
-      id: Date.now(),
-      name,
-      email,
-      age,
+  useEffect( () => {
+    async function buscarUsuarios(){
+      const response = await axios.get('http://localhost:3003/usuarios')
+
+      setUsers(response.data)
     }
 
-    console.log(newUsers)
+    buscarUsuarios()
+  }, [])
 
-    setUsers([...users, newUsers])
+  async function handleSubmit(event){
+    event.preventDefault()
+
+    await axios.post('http://localhost:3003/usuarios', {
+      nome: name,
+      email,
+      idade: age,
+    })
+
+    const response = await axios.get('http://localhost:3003/usuarios')
+    setUsers(response.data)
+
+    setName("")
+    setEmail("")
+    setAge("")
   }
   return (
     <div className='app'>
@@ -49,7 +63,7 @@ function App() {
       </form>
         <div className='user-list'>
           {users.map((user) => (
-          <UserCard key={user.id} user={user}/>
+          <UserCard key={user._id} user={user}/>
           ))}
         </div>
     </div>
