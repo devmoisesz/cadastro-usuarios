@@ -4,6 +4,12 @@ Aplicação fullstack para gerenciamento de usuários, desenvolvida com React no
 
 ---
 
+## 🧑‍💻 Autor
+
+Desenvolvido por Moisés Figueiredo
+
+---
+
 ## 🧠 Sobre o projeto
 
 Este projeto tem como objetivo demonstrar a construção de uma aplicação completa (fullstack), integrando frontend e backend em um fluxo funcional de cadastro e listagem de usuários.
@@ -12,14 +18,17 @@ A aplicação permite a comunicação entre uma interface desenvolvida em React 
 
 ---
 
+## 🎯 Objetivo
+
+O projeto foi desenvolvido com foco em aprendizado e prática de conceitos essenciais do desenvolvimento web moderno, como:
+
+* Criação de APIs REST
+* Integração entre sistemas
+* Manipulação de banco de dados
+* Estruturação de aplicações fullstack
+---
+
 ## 🛠️ Tecnologias utilizadas
-
-### 🔹 Backend
-
-* Node.js
-* Express
-* MongoDB
-* Mongoose
 
 ### 🔹 Frontend
 
@@ -27,6 +36,12 @@ A aplicação permite a comunicação entre uma interface desenvolvida em React 
 * JavaScript
 * HTML e CSS
 
+### 🔹 Backend
+
+* Node.js
+* Express
+* MongoDB
+* Mongoose
 ---
 
 ## ⚙️ Funcionalidades
@@ -55,22 +70,4 @@ A comunicação entre as camadas é feita através de requisições HTTP no padr
 ```
 cadastro-usuarios/
  ├── api/        # Backend (Node.js + Express)
- ├── interface/  # Frontend (React)
-```
-
----
-
-## 🎯 Objetivo
-
-O projeto foi desenvolvido com foco em aprendizado e prática de conceitos essenciais do desenvolvimento web moderno, como:
-
-* Criação de APIs REST
-* Integração entre sistemas
-* Manipulação de banco de dados
-* Estruturação de aplicações fullstack
-
----
-
-## 🧑‍💻 Autor
-
-Desenvolvido por Moisés Figueiredo
+ ├── interface/  # Frontend (React)```
